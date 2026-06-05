@@ -1,0 +1,2 @@
+# SnapBook
+Photography Booking Platform

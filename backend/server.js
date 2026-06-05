@@ -15,7 +15,8 @@ const photographerRoutes = require("./routes/photographerRoutes");
 app.use("/api/photographers", photographerRoutes);
 
 const bookingRoutes = require("./routes/bookingRoutes");
-app.use("/api/bookings", bookingRoutes);
+app.use("/api/Bookings", bookingRoutes);
+
 
 app.get("/", (req, res) => {
   res.send("SnapBook Backend Running");

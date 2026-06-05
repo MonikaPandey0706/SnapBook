@@ -4,30 +4,18 @@ const Booking = require("../models/Booking");
 const router = express.Router();
 
 router.post("/", async (req, res) => {
-  try {
-    const booking = await Booking.create(req.body);
+  const booking = await Booking.create(req.body);
 
-    res.json({
-      message: "Booking request submitted successfully",
-      booking
-    });
-  } catch (error) {
-    res.status(500).json({
-      message: error.message
-    });
-  }
+  res.json({
+    message: "Booking Created Successfully",
+    booking,
+  });
 });
 
 router.get("/", async (req, res) => {
-  try {
-    const bookings = await Booking.find().sort({ createdAt: -1 });
+  const bookings = await Booking.find();
 
-    res.json(bookings);
-  } catch (error) {
-    res.status(500).json({
-      message: error.message
-    });
-  }
+  res.json(bookings);
 });
 
 module.exports = router;

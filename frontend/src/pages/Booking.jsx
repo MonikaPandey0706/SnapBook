@@ -7,16 +7,15 @@ function Booking() {
   const navigate = useNavigate();
 
   const photographer = location.state?.photographer;
-
   const savedUser = JSON.parse(localStorage.getItem("user"));
 
   const [formData, setFormData] = useState({
-    userName: savedUser?.name || "",
+    customerName: savedUser?.name || "",
     email: savedUser?.email || "",
     phone: "",
     eventType: photographer?.category || "",
     eventDate: "",
-    location: "",
+    eventLocation: "",
     message: ""
   });
 
@@ -76,9 +75,9 @@ function Booking() {
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            name="userName"
+            name="customerName"
             placeholder="Your Name"
-            value={formData.userName}
+            value={formData.customerName}
             onChange={handleChange}
             required
           />
@@ -120,9 +119,9 @@ function Booking() {
 
           <input
             type="text"
-            name="location"
+            name="eventLocation"
             placeholder="Event Location"
-            value={formData.location}
+            value={formData.eventLocation}
             onChange={handleChange}
             required
           />

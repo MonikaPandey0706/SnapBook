@@ -15,6 +15,7 @@ import model from "./assets/model_photoshoot.jpg";
 import prewedding from "./assets/prewedding.jpg";
 import travel from "./assets/travel.jpg";
 import Booking from "./pages/Booking";
+import MyBookings from "./pages/MyBookings";
 
 function Home() {
   const heroStyle = {
@@ -147,13 +148,16 @@ function App() {
             <Link to="/photographers">Photographers</Link>
 
             {user ? (
-              <>
-                <span className="username">👤 {user.name}</span>
-                <button className="logout-btn" onClick={logout}>
-                  Logout
-                </button>
-              </>
-            ) : (
+  <>
+    <Link to="/my-bookings">My Bookings</Link>
+
+    <span className="username">👤 {user.name}</span>
+
+    <button className="logout-btn" onClick={logout}>
+      Logout
+    </button>
+  </>
+) : (
               <>
                 <Link to="/login">Login</Link>
                 <Link to="/register">Register</Link>
@@ -168,6 +172,7 @@ function App() {
           <Route path="/register" element={<Register setUser={setUser} />} />
           <Route path="/login" element={<Login setUser={setUser} />} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/my-bookings" element={<MyBookings />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -536,3 +536,44 @@ button:hover {
 .booking-box button {
   width: 100%;
 }
+.my-bookings-page {
+  min-height: 85vh;
+  padding: 70px 60px;
+  background: #fff8f2;
+}
+
+.my-bookings-page h2 {
+  text-align: center;
+  font-size: 38px;
+  color: #5a3e2b;
+  margin-bottom: 35px;
+}
+
+.no-bookings {
+  text-align: center;
+  color: #6b4f4f;
+  font-size: 18px;
+}
+
+.booking-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.booking-card {
+  background: white;
+  padding: 25px;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(120, 80, 50, 0.16);
+}
+
+.booking-card h3 {
+  color: #b85c38;
+  margin-bottom: 15px;
+}
+
+.booking-card p {
+  color: #6b4f4f;
+  margin-bottom: 8px;
+}
